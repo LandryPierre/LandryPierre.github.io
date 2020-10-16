@@ -1,0 +1,132 @@
+#competences
+{
+    color: rgb(0, 0, 0);
+    width: 350px;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: justify;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.301);
+}
+#experiences
+{
+    color: rgb(0, 0, 0);
+    width: 350px;
+    border: 1px solid black;
+    text-align: justify;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.301);
+}
+#presentation
+{
+    color: red;
+    text-shadow: 7px 2px 5px black;
+}
+#competences-experiences
+{
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+#diplomes-formations
+{
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+#portfolio
+{
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+#contact
+{
+    color: rgb(0, 0, 0);
+}
+.back-image
+{
+    background-image: url(statut-du-dirigeant.jpg);
+    background-size: 50%;
+    background-position: top;
+    background-repeat: no-repeat;
+    padding: 50px;
+}
+.back-image1
+{
+    background-image: url(sans-titre-20.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+header
+{
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+#conteneur
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+fieldset
+{
+    background-color:rgb(143, 143, 143);
+    margin:1px;
+    padding:9px;
+    text-align: center;
+    color: whitesmoke;
+}
+section
+{
+    text-align: center;
+}
+a
+{
+    color: rgba(255, 0, 0, 0.774);
+    text-shadow: 2px 2px 5px black;
+}
+.back-text
+{
+    text-shadow: 2px 2px red;
+}
+.menu
+{
+    color: black;
+}
+.background
+{
+    background-color: rgba(255, 255, 255, 0.301);
+    width: 65%;
+    margin: 0 auto;
+}
+footer
+{
+    text-align: center;
+}
+.btn-primary
+{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: #FF0000;
+    font-family: Open Sans;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 18px;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 1px 1px 20px 0 #000000;
+    -moz-box-shadow: 1px 1px 20px 0 #000000;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #FFFFFF 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointe
+}
+.btn-primary:hover {
+    background: #FFFFFF;
+    border: solid #FFAE00 1px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+ }
