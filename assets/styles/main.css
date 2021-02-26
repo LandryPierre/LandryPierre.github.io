@@ -1,0 +1,2360 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+a {
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+input,
+select {
+  vertical-align: middle;
+}
+ul {
+  list-style-type: none;
+}
+@font-face {
+  font-family: "druk_pierre_testregular";
+  src: url("../fonts/drukxcond-superdesktop-webfont.eot");
+  src: url("../fonts/drukxcond-superdesktop-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/drukxcond-superdesktop-webfont.woff2") format("woff2"),
+    url("../fonts/drukxcond-superdesktop-webfont.woff") format("woff"),
+    url("../fonts/drukxcond-superdesktop-webfont.ttf") format("truetype"),
+    url("../fonts/drukxcond-superdesktop-webfont.svg#druk_pierre_testregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "body_medium";
+  src: url("../fonts/body-medium-webfont.eot");
+  src: url("../fonts/body-medium-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/body-medium-webfont.woff2") format("woff2"),
+    url("../fonts/body-medium-webfont.woff") format("woff"),
+    url("../fonts/body-medium-webfont.ttf") format("truetype"),
+    url("../fonts/body-medium-webfont.svg#body_mediumregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "body_regular";
+  src: url("../fonts/body-regular-webfont.eot");
+  src: url("../fonts/body-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/body-regular-webfont.woff2") format("woff2"),
+    url("../fonts/body-regular-webfont.woff") format("woff"),
+    url("../fonts/body-regular-webfont.ttf") format("truetype"),
+    url("../fonts/body-regular-webfont.svg#body_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "title";
+  src: url("../fonts/title-webfont.eot");
+  src: url("../fonts/title-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/title-webfont.woff2") format("woff2"),
+    url("../fonts/title-webfont.woff") format("woff"),
+    url("../fonts/title-webfont.ttf") format("truetype"),
+    url("../fonts/title-webfont.svg#titleregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.clear {
+  clear: both;
+}
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000;
+  font-family: "body_regular";
+}
+* {
+  box-sizing: border-box;
+}
+section {
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#app > header {
+  position: fixed;
+  top: 0;
+  padding: 65px 70px 0;
+  width: 100%;
+  height: 95px;
+  color: #fff;
+  z-index: 10;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.01s linear 0s;
+}
+#app > header .logo {
+  float: left;
+}
+#app > header .menu {
+  float: right;
+}
+header.show .logo .logo-letter-inner {
+  opacity: 1;
+  transform: translate(0%, 0);
+}
+header.show .menu a {
+  opacity: 1;
+}
+header.black {
+  transition: background 0.3s linear 1s;
+}
+header.black .logo,
+header.black .menu a {
+  color: #000;
+}
+header.black .logo:after,
+header.black .menu a:after {
+  background: #000;
+}
+.logo {
+  display: block;
+  color: #fff;
+  font-family: "druk_pierre_testregular";
+  font-size: 30px;
+  margin: 4px 0 0 0;
+  height: 30px;
+  text-decoration: none;
+}
+.logo .name {
+  text-transform: uppercase;
+  transform: translateY(100%);
+}
+.logo .back {
+  letter-spacing: 0.005em;
+  opacity: 0;
+  transform: translateY(-222%);
+  font-family: "body_regular";
+  font-size: 13px;
+  position: relative;
+}
+.logo .back:after {
+  content: "";
+  position: absolute;
+  width: 88%;
+  height: 1px;
+  background: #000;
+  bottom: -7px;
+  left: 0;
+  transform: scalex(0);
+  transition: all 0.3s ease-out;
+  transform-origin: 100% 0;
+}
+.logo .back:hover:after {
+  transform: scalex(1);
+}
+header.mobile {
+  padding: 30px 30px 0;
+  width: 100%;
+  color: #fff;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.01s linear 0s;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+header.mobile .title {
+  color: #4f4f4f;
+  margin-top: 5px;
+}
+header.mobile .menu {
+  margin-top: 30px;
+}
+header.show .logo .logo-letter-inner {
+  opacity: 1;
+  transform: translate(0%, 0);
+}
+header.show .menu a {
+  opacity: 1;
+}
+header.black {
+  transition: background 0.3s linear 1s;
+}
+header.black .logo,
+header.black .menu a {
+  color: #000;
+}
+header.black .logo:after,
+header.black .menu a:after {
+  background: #000;
+}
+.m-project-detail-header {
+  width: auto;
+  height: calc(100% + 20px);
+  position: relative;
+  background: #fff;
+}
+.m-project-detail-header .wrapper {
+  position: absolute;
+  padding: 0 20px;
+  margin-top: 180px;
+}
+.m-project-detail-header .line {
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.m-project-detail-header .inner {
+  padding: 0 0 2px 0;
+}
+.m-project-detail-header .label {
+  margin-right: 5px;
+  color: #bcbcbc;
+}
+.m-project-detail-header .title {
+  font-size: 60px;
+  font-family: "title";
+  letter-spacing: 20px;
+  margin-bottom: 70px;
+}
+.menu {
+  height: 30px;
+  overflow: hidden;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  height: 100%;
+  padding: 8px 0 0 0;
+  display: block;
+  float: left;
+  font-size: 13px;
+  transform: translateY(100%);
+  position: relative;
+}
+.menu a:after {
+  content: "";
+  width: 100%;
+  background: #fff;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+  transition: all 0.3s linear;
+}
+.menu a:not(:last-child) {
+  margin-right: 35px;
+}
+.menu a.v-link-active:after,
+.menu a:hover:after {
+  transform: scaleX(1);
+}
+.parallax-cover {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.parallax-cover.clickable {
+  cursor: pointer;
+}
+.parallax-cover .text-wrapper {
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-out;
+  position: absolute;
+  top: 0;
+}
+.parallax-cover .text {
+  font-family: "druk_pierre_testregular";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  font-size: 500px;
+  color: #fff;
+}
+.parallax-cover .text .letter {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+  text-align: center;
+}
+.parallax-cover .text .letter .inner {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
+  will-change: transform;
+}
+.parallax-cover .img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: all 1s ease-out;
+}
+.parallax-cover img {
+  width: 105%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) scale(1.2);
+}
+.project-detail-header {
+  width: 100%;
+  height: 100%;
+  padding: 225px 0 0 0;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  text-transform: uppercase;
+}
+.project-detail-header .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 70px));
+}
+.project-detail-header .line {
+  width: 100%;
+  height: 88px;
+  position: relative;
+  font-size: 102px;
+  font-family: "title";
+  letter-spacing: 50px;
+  padding: 20px 0;
+  box-sizing: content-box;
+}
+.project-detail-header .line .inner {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.project-detail-header .line .label {
+  position: absolute;
+  top: 0;
+  font-size: 10px;
+  font-family: "body_regular";
+  letter-spacing: 1px;
+  line-height: 200%;
+  opacity: 0;
+  transform: translateY(20px);
+  text-transform: uppercase;
+}
+.project-detail-header .mask {
+  position: relative;
+  overflow: hidden;
+}
+.project-detail-header .mask.title,
+.project-detail-header .mask.date {
+  position: absolute;
+}
+.project-detail-header .mask.date {
+  width: 300px;
+  padding-left: 70px;
+  right: 0;
+}
+.project-detail-header .title-container {
+  position: absolute;
+  left: 0;
+  margin-left: 70px;
+}
+.project-detail-header .date-container {
+  position: absolute;
+  right: -55px;
+}
+.project-detail-header .date-container .label {
+  left: 0;
+}
+.project-detail-header .client-container {
+  text-align: center;
+}
+.project-detail-header .client-container .client {
+  display: inline-block;
+  position: relative;
+}
+.project-detail-header .client-container .client .label {
+  right: -30px;
+}
+.project-detail-header .role1-container .role1 {
+  position: absolute;
+  right: -50px;
+}
+.project-detail-header .role1-container .label {
+  left: -60px;
+}
+.project-detail-header .roll {
+  font-size: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.project-detail-header .roll.show .letter {
+  transition: all 1s cubic-bezier(0, 0, 0.13, 1) 1.9s;
+  transform: translateY(0);
+}
+.project-detail-header .roll.show:after {
+  transform: scaleY(1);
+  transition: all 0.8s cubic-bezier(0, 0, 0.13, 1) 1.6s;
+}
+.project-detail-header .roll .label {
+  display: inline-block;
+  overflow: hidden;
+}
+.project-detail-header .roll .letter {
+  display: block;
+  float: left;
+  transform: translateY(30px);
+  transition: all 0.01s cubic-bezier(0, 0, 0.13, 1) 0s;
+}
+.project-detail-header .roll:after {
+  content: "";
+  width: 1px;
+  height: 40px;
+  background: #000;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: scaleY(0);
+  transform-origin: 0 100%;
+  transition: all 0.01s linear 0s;
+}
+section#about {
+  background: #fff;
+  min-height: 100%;
+  height: auto;
+  position: static;
+}
+section#about .shadow {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+section#about .content {
+  height: 100%;
+  width: 100%;
+  padding: 300px 0 0 0;
+}
+section#about .content-inner {
+  width: 100%;
+}
+section#about li {
+  transition: all 1s ease-out;
+  opacity: 0;
+  transform: translateY(50px) translateZ(0);
+  will-change: transform;
+}
+section#about li.show {
+  opacity: 1;
+  transform: translateY(0) translateZ(0);
+}
+section#about .headline {
+  width: 100%;
+  height: 364px;
+  margin: 0 0 0 0;
+  display: flex;
+  background: #fff;
+}
+section#about .headline .letter {
+  font-size: 450px;
+  font-family: "title";
+  flex-basis: 218px;
+  overflow: hidden;
+}
+section#about .headline .letter .letter-inner {
+  transform: translateY(100%);
+}
+section#about .headline .info {
+  flex-basis: 1210px;
+  text-align: center;
+  line-height: 335px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+section#about .headline .info .letter-inner {
+  transform: translateY(100%);
+}
+section#about .skills-and-publications {
+  width: 100%;
+  padding: 200px 0 385px 0;
+  position: relative;
+  background: #fff;
+}
+section#about .skills-and-publications .inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+section#about .skills-and-publications .few-words-label {
+  display: inline-block;
+  font-size: 45px;
+  font-family: "title";
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  transform: rotate(-90deg) translateY(-420px) translateX(-28px);
+  transform-origin: 100% 0%;
+}
+section#about .skills-and-publications li {
+  margin-bottom: 35px;
+}
+section#about .skills-and-publications li.label {
+  font-weight: bold;
+}
+section#about .skills-and-publications li a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+section#about .skills-and-publications li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: #000;
+  transform: scaleX(0);
+  transition: all 0.2s ease-out;
+  transform-origin: 0 0;
+}
+section#about .skills-and-publications li a:hover:after {
+  transform: scaleX(1);
+}
+section#about .skills-and-publications div.skills {
+  margin: 0 0 0 18.18181818%;
+}
+section#about .skills-and-publications div.skills ul {
+  width: 25%;
+  float: left;
+}
+section#about .skills-and-publications .publications {
+  margin: 130px 0 0 18.18181818%;
+}
+section#about .contact {
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.15s linear;
+  padding: 150px 0 0 0;
+  display: table;
+}
+section#about .contact .contact-inner {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+section#about .contact .contact-inner .contact-inner-left {
+  font-family: "title";
+  font-size: 140px;
+  text-transform: uppercase;
+  letter-spacing: 70px;
+  float: left;
+  text-align: left;
+  margin-left: 70px;
+  width: calc(70% - 70px);
+}
+section#about .contact .contact-inner .contact-inner-right {
+  display: block;
+  float: right;
+  line-height: 350px;
+  font-size: 20px;
+  margin-right: 70px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  width: calc(30% - 70px);
+}
+section#about .contact .contact-inner .contact-inner-right span {
+  position: relative;
+}
+section#about .contact .contact-inner .contact-inner-right span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  top: 50%;
+  left: 0;
+  margin-top: 20px;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+section#about .contact .contact-inner .contact-inner-right:hover span:after {
+  transform: scaleX(1);
+}
+section#about .credits {
+  width: 100%;
+  padding: 10px 10px 50px;
+  font-size: 12px;
+  text-align: left;
+  background: #1e1e1e;
+  color: #6c6c6c;
+  padding-left: 70px;
+}
+section#about .credits a {
+  color: #6c6c6c;
+  text-decoration: none;
+  position: relative;
+}
+section#about .credits a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #6c6c6c;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transform-origin: 0 0;
+  transition: all 1s cubic-bezier(0, 0, 0.13, 1);
+  transform: scaleX(0);
+}
+section#about .credits a:hover:after {
+  transform: scaleX(1);
+}
+section#archives .shadow {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+section#archives .content {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+}
+section#archives .inner {
+  width: 100%;
+}
+section#archives .void {
+  height: 70%;
+}
+section#archives .img-container {
+  width: 350px;
+  margin: 0 auto;
+}
+section#archives img {
+  width: 100%;
+  display: block;
+  margin: 0 0 200px 0;
+}
+section#archives .timeline {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 50%;
+  transform: scaleX(0);
+}
+section#archives .timeline .progress {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: scale(0.3);
+  transform-origin: 0 0;
+}
+section#archives .dates-container {
+  width: 100%;
+  height: 166px;
+  position: fixed;
+  top: 50%;
+  margin-top: -112px;
+  transform: translateY(50px);
+  opacity: 0;
+}
+section#archives .dates-container ul {
+  margin-top: 30px;
+  transition: all 0.9s cubic-bezier(0.57, 0.04, 0.29, 0.99);
+}
+section#archives .dates-container ul li {
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0.57, 0.04, 0.29, 0.99);
+}
+section#archives .dates-container ul.y2016 {
+  transform: translateY(-17px);
+}
+section#archives .dates-container ul.y2016 li:nth-child(1) {
+  opacity: 1;
+}
+section#archives .dates-container ul.y2015 {
+  transform: translateY(-242px);
+}
+section#archives .dates-container ul.y2015 li:nth-child(2) {
+  opacity: 1;
+}
+section#archives .dates-container ul.y2014 {
+  transform: translateY(-467px);
+}
+section#archives .dates-container ul.y2014 li:nth-child(3) {
+  opacity: 1;
+}
+section#archives .dates-container ul.y2013 {
+  transform: translateY(-691px);
+}
+section#archives .dates-container ul.y2013 li:nth-child(4) {
+  opacity: 1;
+}
+section#archives .dates-container li {
+  display: block;
+  font-size: 225px;
+  font-family: "title";
+  color: #fff;
+  text-align: center;
+  letter-spacing: 150px;
+  padding-left: 150px;
+}
+section#home {
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+}
+section#home .slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+section#home .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section#home .slide.active .img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+section#home .slide .title-wrapper {
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-out;
+  position: absolute;
+  top: 0;
+}
+section#home .slide .title {
+  font-family: "druk_pierre_testregular";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+}
+section#home .slide .title .letter {
+  position: relative;
+  overflow: hidden;
+  height: 385px;
+  text-align: center;
+}
+/* section#home .slide .title .letter:first-child {
+  text-align: left;
+  transform: translateX(-23px);
+} */
+/* section#home .slide .title .letter:last-child {
+  text-align: right;
+  transform: translateX(23px);
+} */
+section#home .slide .title .letter .inner {
+  display: block;
+  opacity: 0;
+  transform: translateY(100%);
+  will-change: transform;
+}
+section#home .slide .img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 1s ease-out;
+  z-index: 1;
+}
+section#home .slide img {
+  width: 110%;
+  position: absolute;
+  bottom: -50;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+section#home .slide.skills .title {
+  color: #7aa8ab;
+  font-size: 22vw;
+  margin-top: 12vh;
+}
+section#home .slide.skills .title .letter {
+  flex-basis: 16.666666667%;
+}
+section#home .slide.presentation .title {
+  color: #b1a995;
+  font-size: 8vw;
+  margin-top: 12vh;
+}
+section#home .slide.presentation .title .letter {
+  flex-basis: 8.333%;
+}
+section#home .slide.diplomes-formations .title {
+  color: #756980;
+  font-size: 8vw;
+  margin-top: 12vh;
+}
+section#home .slide.diplomes-formations .title .letter {
+  flex-basis: 5.26%;
+}
+section#home .slide.projets .title {
+  color: #95cfb4;
+  font-size: 8vw;
+  margin-top: 12vh;
+}
+section#home .slide.projets .title .letter {
+  flex-basis: 14.285%;
+}
+section#home .slide.contact .title {
+  color: #c92138;
+  font-size: 8vw;
+  margin-top: 12vh;
+}
+section#home .slide.contact .title .letter {
+  flex-basis: 14.2857%;
+}
+section#home .slide.hermes .title {
+  color: #f16a38;
+}
+section#home .slide.hermes .title .letter {
+  flex-basis: 16.66666666%;
+}
+section#home .instructions {
+  position: absolute;
+  bottom: 70px;
+  color: #fff;
+  font-size: 13px;
+  width: 100%;
+  padding: 0 70px;
+  opacity: 0;
+  transition: opacity 0.3s linear 1s;
+}
+section#home .instructions.show {
+  opacity: 1;
+}
+section#home .instructions .scroll {
+  float: left;
+}
+section#home .instructions .click {
+  float: right;
+}
+section#icons {
+  background: #000;
+  min-height: 100%;
+  height: 6000px;
+  position: static;
+  color: #fff;
+  text-align: center;
+}
+section#icons .shadow {
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+section#icons .content {
+  height: 100%;
+  width: 100%;
+  padding: 160px 0 0 0;
+}
+section#icons .inner {
+  width: 100%;
+}
+section#icons .page-desc {
+  width: 100%;
+  font-family: "body_regular";
+  font-size: 13px;
+}
+section#icons h1 {
+  font-family: "title";
+  font-size: 80px;
+  text-align: center;
+  letter-spacing: 110px;
+  margin-left: 48px;
+  margin-top: 100px;
+  font-weight: 100;
+  line-height: 70px;
+  margin-left: 110px;
+}
+section#icons h1 .title-line {
+  height: 65px;
+  overflow: hidden;
+  margin-bottom: 55px;
+}
+section#icons h1 .title-line .title-line-inner {
+  transition: all 1s cubic-bezier(0.07, 0.41, 0, 1);
+  transform: translateY(100%);
+  opacity: 0;
+}
+section#icons h1 .title-line.show .title-line-inner {
+  transform: translateY(0);
+  opacity: 1;
+}
+section#icons .wrapper {
+  width: 976px;
+  margin: 0 auto;
+  position: relative;
+}
+section#icons .coloredBlock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 1s cubic-bezier(0.74, 0.15, 0.04, 0.96);
+}
+section#icons .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section#icons svg {
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  transform: translateY(30px);
+}
+section#icons svg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+section#icons .block-1,
+section#icons .block-2,
+section#icons .block-3,
+section#icons .block-4 {
+  position: absolute;
+}
+section#icons .label {
+  font-family: "body_regular";
+  font-size: 14px;
+  color: #6c6c6c;
+  display: block;
+}
+section#icons .icons-1 {
+  width: 100%;
+  height: 1130px;
+  margin-top: 150px;
+}
+section#icons .icons-1 svg * {
+  fill: #fff;
+}
+section#icons .icons-1 .block-1 {
+  width: 66.59836066%;
+  height: 397px;
+  position: absolute;
+  right: 0;
+}
+section#icons .icons-1 .block-1 .coloredBlock {
+  transform: scaleX(0);
+  background: #121212;
+  transform-origin: 100% 0;
+}
+section#icons .icons-1 .block-1 .coloredBlock .background {
+  width: 100%;
+  height: 100%;
+  background: url("../images/icons/1.jpg");
+  opacity: 0;
+  transition: opacity 0.3s linear 1s;
+}
+section#icons .icons-1 .block-1 .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-1 .block-1 .coloredBlock.show .background {
+  opacity: 1;
+}
+section#icons .icons-1 .block-1 svg {
+  width: 86px;
+}
+section#icons .icons-1 .block-2 {
+  width: 33.40163934%;
+  height: 380px;
+  position: absolute;
+  top: 224px;
+}
+section#icons .icons-1 .block-2 .coloredBlock {
+  background: #c02036;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+section#icons .icons-1 .block-2 .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-1 .block-2 svg {
+  width: 48px;
+}
+section#icons .icons-1 .block-2 svg * {
+  fill: #3a060d;
+}
+section#icons .icons-1 .block-3 {
+  width: 66.59836066%;
+  position: absolute;
+  right: 0;
+  top: 397px;
+  text-align: left;
+}
+section#icons .icons-1 .block-3 .label {
+  font-family: "body_regular";
+  font-size: 14px;
+  color: #6c6c6c;
+  margin: 30px 0 0 30px;
+  display: block;
+}
+section#icons .icons-1 .block-3 svg {
+  width: 535px;
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  transform: translate(-50%, 0);
+  opacity: 0.5;
+}
+section#icons .icons-1 .block-4 {
+  width: 33.40163934%;
+  height: 300px;
+  position: absolute;
+  top: 624px;
+}
+section#icons .icons-1 .block-4 svg {
+  width: 48px;
+  top: 180px;
+  position: absolute;
+  left: 40px;
+}
+section#icons .icons-1 .block-4 svg:nth-child(1) {
+  width: 60px;
+}
+section#icons .icons-1 .block-4 svg * {
+  fill: #c02036;
+}
+section#icons .icons-1 .block-5 {
+  position: absolute;
+  top: 1100px;
+  text-align: center;
+  width: 100%;
+}
+section#icons .icons-1 .block-5 .cars {
+  display: inline-block;
+}
+section#icons .icons-1 .block-5 svg {
+  height: 30px;
+  transform: translateX(50px);
+}
+section#icons .icons-1 .block-5 svg.show {
+  transform: translate(0, 0) translateZ(0);
+}
+section#icons .icons-1 .block-5 .car1 {
+  margin-left: 32px;
+  transition-delay: 0s;
+}
+section#icons .icons-1 .block-5 .car2 {
+  margin-left: 130px;
+  transition-delay: 0.2s;
+}
+section#icons .icons-1 .block-5 .car3 {
+  margin-left: 128px;
+  transition-delay: 0.4s;
+}
+section#icons .icons-1 .block-5 .car4 {
+  margin-left: 104px;
+  transition-delay: 0.6s;
+}
+section#icons .icons-1 .block-5 .car5 {
+  margin-left: 90px;
+  transition-delay: 0.8s;
+}
+section#icons .icons-1 .block-5 .car6 {
+  margin-left: 35px;
+  transition-delay: 1s;
+}
+section#icons .icons-2 {
+  position: relative;
+  height: 1360px;
+  margin-top: 305px;
+}
+section#icons .icons-2 .block-1 {
+  width: 83.3%;
+  height: 490px;
+}
+section#icons .icons-2 .block-1 .coloredBlock {
+  transform: scaleX(0);
+  background: #203456;
+  transform-origin: 100% 0;
+}
+section#icons .icons-2 .block-1 .coloredBlock .background {
+  width: 100%;
+  height: 100%;
+  background: url("../images/icons/2.jpg");
+  opacity: 0;
+  transition: opacity 0.3s linear 1s;
+}
+section#icons .icons-2 .block-1 .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-2 .block-1 .coloredBlock.show .background {
+  opacity: 1;
+}
+section#icons .icons-2 .block-1 svg {
+  height: 144px;
+}
+section#icons .icons-2 .block-1 svg * {
+  fill: #fff;
+}
+section#icons .icons-2 .block-2 {
+  width: 50%;
+  height: 655px;
+  top: 455px;
+  right: 0;
+}
+section#icons .icons-2 .block-2 .coloredBlock {
+  background: #75a1a4;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+section#icons .icons-2 .block-2 .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-2 .block-2 svg {
+  width: 47px;
+  height: 50%;
+  display: block;
+  margin: 0 auto;
+}
+section#icons .icons-2 .block-2 svg * {
+  fill: #fff;
+}
+section#icons .icons-2 .block-3 {
+  width: 50%;
+  height: 370px;
+  top: 490px;
+  position: relative;
+}
+section#icons .icons-2 .block-3 .label {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+section#icons .icons-2 .block-3 svg {
+  margin-top: 165px;
+  height: 164px;
+}
+section#icons .icons-2 .block-3 svg * {
+  fill: #fff;
+}
+section#icons .icons-2 .block-4 {
+  width: 28px;
+  height: 280px;
+  top: 1080px;
+  left: 310px;
+}
+section#icons .icons-2 .block-4 svg {
+  display: block;
+  width: 100%;
+}
+section#icons .icons-2 .block-4 svg * {
+  fill: #455e84;
+}
+section#icons .icons-2 .block-4 svg:nth-child(2) {
+  margin: 100px 0;
+}
+section#icons .icons-3 {
+  position: relative;
+  height: 691px;
+  margin-top: 305px;
+}
+section#icons .icons-3 .block-1 {
+  text-align: center;
+  width: 710px;
+  margin-left: 130px;
+}
+section#icons .icons-3 .block-1 .block-1-inner {
+  display: inline-block;
+}
+section#icons .icons-3 .block-1 .block-1-inner svg {
+  height: 45px;
+}
+section#icons .icons-3 .block-1 .block-1-inner svg * {
+  fill: #fff;
+}
+section#icons .icons-3 .block-1 .block-1-inner svg:nth-child(1) {
+  transition-delay: 0s;
+}
+section#icons .icons-3 .block-1 .block-1-inner svg:nth-child(2) {
+  margin: 0 270px;
+  transition-delay: 0.4s;
+}
+section#icons .icons-3 .block-1 .block-1-inner svg:nth-child(3) {
+  transition-delay: 0.8s;
+}
+section#icons .icons-3 .block-2 {
+  width: 44px;
+  top: 280px;
+  left: 68px;
+}
+section#icons .icons-3 .block-2 svg {
+  width: 100%;
+}
+section#icons .icons-3 .block-2 svg * {
+  fill: #717171;
+}
+section#icons .icons-3 .block-3 {
+  width: 813px;
+  position: absolute;
+  top: 200px;
+  left: 163px;
+  text-align: left;
+}
+section#icons .icons-3 .block-3 .block-3-inner {
+  width: 813px;
+  height: 443px;
+  margin-top: 35px;
+  text-align: center;
+  line-height: 443px;
+}
+section#icons .icons-3 .block-3 .block-3-inner .coloredBlock {
+  background: #70647a;
+  height: 87%;
+  transform: scaleX(0);
+  transform-origin: 100% 0;
+}
+section#icons .icons-3 .block-3 .block-3-inner .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-3 .block-3 .block-3-inner .svgs {
+  display: inline-block;
+}
+section#icons .icons-3 .block-3 .block-3-inner .svgs svg {
+  height: 30px;
+}
+section#icons .icons-3 .block-3 .block-3-inner .svgs svg * {
+  fill: #fff;
+}
+section#icons .icons-3 .block-3 .block-3-inner .svgs svg:nth-child(1) {
+  transition-delay: 0s;
+}
+section#icons .icons-3 .block-3 .block-3-inner .svgs svg:nth-child(2) {
+  margin: 0 85px;
+  transition-delay: 0.3s;
+}
+section#icons .icons-3 .block-3 .block-3-inner .svgs svg:nth-child(1) {
+  transition-delay: 0.6s;
+}
+section#icons .icons-4 {
+  position: relative;
+  height: 1079px;
+  margin-top: 300px;
+}
+section#icons .icons-4 .block-1 {
+  width: 50%;
+  height: 502px;
+}
+section#icons .icons-4 .block-1 .coloredBlock {
+  background: #e86536;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+section#icons .icons-4 .block-1 .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-4 .block-1 svg {
+  height: 82px;
+}
+section#icons .icons-4 .block-2 {
+  width: 33.29918033%;
+  margin-top: 33.29918033%;
+  position: absolute;
+  left: 50%;
+}
+section#icons .icons-4 .block-2 .svg-container {
+  margin-top: 35px;
+  height: 393px;
+}
+section#icons .icons-4 .block-2 .svg-container .coloredBlock {
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: 100% 0;
+}
+section#icons .icons-4 .block-2 .svg-container .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-4 .block-2 .svg-container svg {
+  height: 68px;
+}
+section#icons .icons-4 .block-2 .label {
+  padding-left: 55px;
+}
+section#icons .icons-4 .block-3 {
+  position: absolute;
+  right: 0;
+  width: 163px;
+}
+section#icons .icons-4 .block-3 svg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section#icons .icons-4 .block-3 svg:nth-child(1) {
+  width: 40px;
+  top: 0;
+}
+section#icons .icons-4 .block-3 svg:nth-child(2) {
+  width: 60px;
+  top: 256px;
+}
+section#icons .icons-4 .block-3 svg:nth-child(3) {
+  width: 44px;
+  top: 468px;
+}
+section#icons .icons-4 .block-4 {
+  position: absolute;
+  top: 1032px;
+  width: 100%;
+}
+section#icons .icons-4 .block-4 svg:nth-child(1) {
+  width: 60px;
+  margin-left: 1.147541%;
+  transition-delay: 0s;
+}
+section#icons .icons-4 .block-4 svg:nth-child(2) {
+  height: 43px;
+  margin-left: 22.95081967%;
+  transition-delay: 0.3s;
+}
+section#icons .icons-4 .block-4 svg:nth-child(3) {
+  height: 43px;
+  margin-left: 22.95081967%;
+  transition-delay: 0.6s;
+}
+section#icons .icons-4 .block-4 svg:nth-child(4) {
+  height: 43px;
+  margin-left: 22.95081967%;
+  transition-delay: 0.9s;
+}
+section#icons .icons-5 {
+  position: relative;
+  margin-top: 305px;
+  height: 652px;
+}
+section#icons .icons-5 .block-1 {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  text-align: left;
+}
+section#icons .icons-5 .block-1 .svg-container {
+  height: 427px;
+}
+section#icons .icons-5 .block-1 .svg-container .coloredBlock {
+  background: #8fc6ac;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+section#icons .icons-5 .block-1 .svg-container .coloredBlock.show {
+  transform: scaleX(1);
+}
+section#icons .icons-5 .block-1 svg {
+  height: 48px;
+}
+section#icons .icons-5 .block-1 .label {
+  margin: 35px 0 0 0;
+}
+section#icons .icons-5 .block-2 {
+  position: absolute;
+  width: 234px;
+  height: 304px;
+  top: 195px;
+  left: 125px;
+}
+section#icons .icons-5 .block-2 svg {
+  position: absolute;
+}
+section#icons .icons-5 .block-2 svg:nth-child(1) {
+  top: 0;
+  left: 0;
+  height: 40px;
+}
+section#icons .icons-5 .block-2 svg:nth-child(2) {
+  top: 20px;
+  right: 0;
+  height: 25px;
+}
+section#icons .icons-5 .block-2 svg:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  height: 48px;
+}
+section#icons .icons-5 .block-2 svg:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  height: 35px;
+}
+section#icons .icons-5 .block-3 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+section#icons .icons-5 .block-3 svg {
+  height: 30px;
+}
+section#icons .icons-6 {
+  position: relative;
+  margin-top: 305px;
+  margin-bottom: 200px;
+  height: 652px;
+}
+section#icons .icons-6 .block-1 {
+  width: 163px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 190px;
+}
+section#icons .icons-6 .block-1 svg {
+  width: 54px;
+}
+section#icons .icons-6 .block-2 {
+  width: 392px;
+  height: 334px;
+  position: absolute;
+  right: 100px;
+}
+section#icons .icons-6 .block-2 svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 130px;
+}
+section#icons .icons-6 .block-2 .label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+section#icons .icons-6 .block-3 {
+  width: 384px;
+  height: 62px;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+}
+section#icons .icons-6 .block-3 svg {
+  height: 100%;
+  position: absolute;
+}
+section#icons .icons-6 .block-3 svg:nth-child(1) {
+  left: 0;
+  transition-delay: 0s;
+}
+section#icons .icons-6 .block-3 svg:nth-child(2) {
+  right: 0;
+  transition-delay: 0.3s;
+}
+section#intro {
+  visibility: visible;
+  opacity: 1;
+  overflow: hidden;
+  background: #fff;
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+section#intro .intro-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section#intro h1 {
+  font-family: "druk_pierre_testregular";
+  font-size: 54px;
+  text-transform: uppercase;
+  letter-spacing: 18px;
+  font-weight: 100;
+}
+section#intro h2 {
+  font-weight: 300;
+  text-align: center;
+  margin: 15px 0 0 0;
+  font-size: 17px;
+}
+section#intro h1,
+section#intro h2 {
+  overflow: hidden;
+}
+section#intro h1 .inner,
+section#intro h2 .inner {
+  transform: translateY(100%);
+}
+section#intro .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000;
+  transform: translateY(100%);
+}
+section#m-about {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 120px 0 0;
+  position: static;
+  font-size: 13px;
+}
+section#m-about header {
+  width: 100%;
+  padding: 40px 18px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+section#m-about header a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+section#m-about .letters {
+  width: 100%;
+  height: 188px;
+  margin: 0 0 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+section#m-about .letter {
+  position: absolute;
+  font-size: 255px;
+  font-family: "title";
+  font-weight: lighter;
+  top: -17px;
+}
+section#m-about .letter:nth-child(1) {
+  left: -9px;
+}
+section#m-about .letter:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%);
+}
+section#m-about .letter:nth-child(3) {
+  right: -9px;
+}
+section#m-about .letter .inner {
+  transform: translateY(100%);
+}
+section#m-about .info {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  text-align: center;
+  line-height: 25px;
+}
+section#m-about .info .gap {
+  height: 50px;
+}
+section#m-about .intro {
+  font-family: "title";
+  font-size: 40px;
+  letter-spacing: 18px;
+  font-weight: lighter;
+  margin: 75px 0;
+  padding: 0 0 0 25px;
+  overflow: hidden;
+  line-height: 60px;
+}
+section#m-about .lists {
+  padding: 0 25px;
+  overflow: hidden;
+}
+section#m-about ul {
+  margin: 0 0 50px 0;
+  text-align: left;
+  width: 50%;
+}
+section#m-about ul:nth-child(even) {
+  float: left;
+}
+section#m-about ul:nth-child(odd) {
+  float: left;
+}
+section#m-about li {
+  margin-bottom: 25px;
+}
+section#m-about li.label {
+  font-weight: bold;
+}
+section#m-about li a {
+  color: #000;
+  text-decoration: none;
+}
+section#m-about .drop {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 50px 25px 0;
+  overflow: hidden;
+}
+section#m-about .drop .head {
+  font-family: "title";
+  font-size: 100px;
+  font-weight: lighter;
+  letter-spacing: 40px;
+}
+section#m-about .drop a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin: 40px 0 60px 0;
+  font-size: 16px;
+}
+section#m-about .drop .credits {
+  display: block;
+  color: #595959;
+  margin: 0 0 50px 0;
+  font-size: 12px;
+}
+section#m-about .drop .credits a {
+  display: inline;
+  color: #595959;
+  text-decoration: underline;
+  font-size: 12px;
+}
+section#m-about .drop .credits a:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+@media screen and (min-width: 640px) {
+  section#m-about .intro {
+    text-align: center;
+  }
+}
+section#m-home {
+  background: #000;
+  cursor: pointer;
+  padding: 0 25px 30px;
+  height: auto;
+  opacity: 0;
+  color: #fff;
+}
+section#m-home header {
+  width: calc(100% + 50px);
+  margin-left: -18px;
+}
+section#m-home .slide {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+section#m-home .slide:not(:last-child) {
+  margin-bottom: 35px;
+}
+section#m-home .slide .title-wrapper {
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-out;
+  position: absolute;
+}
+section#m-home .slide .title {
+  font-family: "druk_pierre_testregular";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-9%);
+  width: 100%;
+  display: flex;
+  font-size: 77px;
+}
+section#m-home .slide .title .letter {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+  text-align: center;
+}
+section#m-home .slide .title .letter .inner {
+  display: block;
+}
+section#m-home .slide img {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+}
+section#m-home .slide.peugeot .title .letter {
+  flex-basis: 14.285714286%;
+}
+section#m-home .slide.maje .title .letter {
+  flex-basis: 25%;
+}
+section#m-home .slide.canalsat .title .letter {
+  flex-basis: 12.5%;
+}
+section#m-home .slide.poiray .title .letter {
+  flex-basis: 16.66666666%;
+}
+section#m-home .slide.tignes .title .letter {
+  flex-basis: 16.66666666%;
+}
+section#m-home .slide.hermes .title .letter {
+  flex-basis: 16.66666666%;
+}
+#m-intro {
+  visibility: visible;
+  opacity: 1;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  z-index: 9;
+}
+#m-intro .intro-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#m-intro h1 {
+  font-family: "druk_pierre_testregular";
+  font-size: 54px;
+  text-transform: uppercase;
+  letter-spacing: 18px;
+  font-weight: 100;
+  text-align: center;
+  margin-left: 9px;
+}
+#m-intro h1 .row {
+  overflow: hidden;
+}
+#m-intro h1 .row .inner {
+  transform: translateY(100%);
+}
+#m-intro h2 {
+  font-weight: 300;
+  text-align: center;
+  margin: 15px 0 0 0;
+  font-size: 14px;
+}
+#m-intro h2 {
+  overflow: hidden;
+  padding-bottom: 3px;
+}
+#m-intro h2 .inner {
+  transform: translateY(110%);
+}
+#m-intro .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000;
+  transform: translateY(100%);
+}
+section#m-project-detail {
+  background: #f5f5f5;
+  position: absolute;
+  visibility: visible;
+  height: auto;
+  font-size: 13px;
+}
+section#m-project-detail header {
+  width: 100%;
+  padding: 40px 18px 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+section#m-project-detail header a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+section#m-project-detail header a:nth-child(1) {
+  float: left;
+}
+section#m-project-detail header a:nth-child(2) {
+  float: right;
+}
+section#m-project-detail img {
+  width: calc(100% - 60px);
+  margin: 30px 0 0 30px;
+}
+section#m-project-detail .sub-header {
+  overflow: hidden;
+  width: 100%;
+  height: 70%;
+  position: relative;
+  margin-bottom: 30px;
+}
+section#m-project-detail .sub-header img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section#m-project-detail .next {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: relative;
+  padding: 50px 0;
+  overflow: hidden;
+  margin-top: 30px;
+}
+section#m-project-detail .next img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 0;
+}
+section#m-project-detail .next .text-wrapper {
+  height: 75px;
+  position: relative;
+  top: 100%;
+  transform: translateY(-50%);
+}
+section#m-project-detail .next .text {
+  font-family: "druk_pierre_testregular";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  font-size: 100px;
+  color: #fff;
+}
+section#m-project-detail .next .text .letter {
+  position: relative;
+  overflow: hidden;
+  height: 380px;
+  text-align: center;
+}
+.hermes .images-block {
+  background: #fff !important;
+}
+@media screen and (max-width: 640px) {
+  section#m-project-detail .sub-header img {
+    width: auto;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 640px) {
+  section#m-project-detail img {
+    width: calc(100% - 300px);
+    margin: 30px 0 0 150px;
+  }
+  section#m-project-detail .next .text-wrapper {
+    height: 75px;
+    position: relative;
+    top: 70%;
+    transform: translateY(-50%);
+  }
+}
+section#project-detail {
+  background: #fff;
+  height: 100%;
+  position: absolute;
+}
+section#project-detail .shadow {
+  height: 12164px;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+section#project-detail .content-inner {
+  width: 100%;
+  height: 100%;
+}
+section#project-detail .wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+section#project-detail .sub-header {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+section#project-detail .sub-header img {
+  display: block;
+  position: absolute;
+  width: calc(100% + 20px);
+  height: auto;
+  top: 50%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+}
+section#project-detail .images-block {
+  width: 100%;
+  padding: 170px 0;
+  background: #f5f5f5;
+  text-align: center;
+}
+section#project-detail .images-block img:not(:last-child) {
+  margin-bottom: 170px;
+}
+section#project-detail .grid-block {
+  width: 100%;
+  height: 100%;
+  background: #1f1f1f;
+  position: relative;
+}
+section#project-detail .grid-block .grid-left,
+section#project-detail .grid-block .grid-right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+section#project-detail .grid-block .grid-left {
+  float: left;
+}
+section#project-detail .grid-block .grid-right {
+  float: right;
+}
+section#project-detail .grid-block .grid-side-1 img,
+section#project-detail .grid-block .grid-side-1 video {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section#project-detail .grid-block .grid-side-2 .grid-side-2-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section#project-detail .grid-block .grid-side-2 .grid-side-2-inner img,
+section#project-detail .grid-block .grid-side-2 .grid-side-2-inner video {
+  display: block;
+}
+section#project-detail
+  .grid-block
+  .grid-side-2
+  .grid-side-2-inner
+  img:not(:last-child),
+section#project-detail
+  .grid-block
+  .grid-side-2
+  .grid-side-2-inner
+  video:not(:last-child) {
+  margin-bottom: 75px;
+}
+section#project-detail .parallax-cover-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.hermes .images-block {
+  background: #fff !important;
+}
+section#projects {
+  background: #fff;
+}
+section#projects .images-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+section#projects .images-container img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: all 0.3s ease-in;
+}
+section#projects .images-container img.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.8s ease-out;
+}
+section#projects .list-container {
+  width: 100%;
+  height: 100%;
+}
+section#projects .list-container ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+section#projects .list-container ul li {
+  position: relative;
+  overflow: hidden;
+}
+section#projects .list-container ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+section#projects .list-container ul li a {
+  display: block;
+  width: 100%;
+  color: #333;
+  font-size: 50px;
+  font-family: "title";
+  text-decoration: none;
+  letter-spacing: 10px;
+  transform: translateY(70px);
+}
+section#projects .list-container ul li a .letter {
+  transition: all 0.2s linear;
+}
+#projects .list-container ul li .letter:nth-child(1) {
+  transition-delay: 0.05s;
+}
+#projects .list-container ul li .letter:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#projects .list-container ul li .letter:nth-child(3) {
+  transition-delay: 0.15s;
+}
+#projects .list-container ul li .letter:nth-child(4) {
+  transition-delay: 0.2s;
+}
+#projects .list-container ul li .letter:nth-child(5) {
+  transition-delay: 0.25s;
+}
+#projects .list-container ul li .letter:nth-child(6) {
+  transition-delay: 0.3s;
+}
+#projects .list-container ul li .letter:nth-child(7) {
+  transition-delay: 0.35s;
+}
+#projects .list-container ul li .letter:nth-child(8) {
+  transition-delay: 0.4s;
+}
+#projects .list-container ul li .letter:nth-child(9) {
+  transition-delay: 0.45s;
+}
+#projects .list-container ul li .letter:nth-child(10) {
+  transition-delay: 0.5s;
+}
+#projects .list-container ul li .letter:nth-child(11) {
+  transition-delay: 0.55s;
+}
+#projects .list-container ul li .letter:nth-child(12) {
+  transition-delay: 0.6s;
+}
+#projects .list-container ul li .letter:nth-child(13) {
+  transition-delay: 0.65s;
+}
+#projects .list-container ul li .letter:nth-child(14) {
+  transition-delay: 0.7s;
+}
+#projects .list-container ul li .letter:nth-child(15) {
+  transition-delay: 0.75s;
+}
+.ps-container {
+  -ms-touch-action: none;
+  touch-action: none;
+  overflow: hidden !important;
+  -ms-overflow-style: none;
+}
+@supports (-ms-overflow-style: none) {
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ps-container {
+    overflow: auto !important;
+  }
+}
+.ps-container.ps-active-x > .ps-scrollbar-x-rail,
+.ps-container.ps-active-y > .ps-scrollbar-y-rail {
+  display: block;
+  background-color: transparent;
+}
+.ps-container.ps-in-scrolling {
+  pointer-events: none;
+}
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container > .ps-scrollbar-x-rail {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+  bottom: 0;
+  height: 15px;
+}
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
+    -moz-border-radius 0.2s ease-in-out;
+  -o-transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
+    -webkit-border-radius 0.2s ease-in-out, -moz-border-radius 0.2s ease-in-out;
+  bottom: 2px;
+  height: 6px;
+}
+.ps-container > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x,
+.ps-container > .ps-scrollbar-x-rail:active > .ps-scrollbar-x {
+  height: 11px;
+}
+.ps-container > .ps-scrollbar-y-rail {
+  display: none;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, opacity 0.2s linear;
+  right: 0;
+  width: 15px;
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  position: absolute;
+  background-color: #aaa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, -webkit-border-radius 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
+    -moz-border-radius 0.2s ease-in-out;
+  -o-transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  transition: background-color 0.2s linear, height 0.2s linear,
+    width 0.2s ease-in-out, border-radius 0.2s ease-in-out,
+    -webkit-border-radius 0.2s ease-in-out, -moz-border-radius 0.2s ease-in-out;
+  right: 2px;
+  width: 6px;
+}
+.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y {
+  width: 11px;
+}
+.ps-container:hover.ps-in-scrolling {
+  pointer-events: none;
+}
+.ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover.ps-in-scrolling.ps-x
+  > .ps-scrollbar-x-rail
+  > .ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover.ps-in-scrolling.ps-y
+  > .ps-scrollbar-y-rail
+  > .ps-scrollbar-y {
+  background-color: #999;
+}
+.ps-container:hover > .ps-scrollbar-x-rail,
+.ps-container:hover > .ps-scrollbar-y-rail {
+  opacity: 0.6;
+}
+.ps-container:hover > .ps-scrollbar-x-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
+  background-color: #999;
+}
+.ps-container:hover > .ps-scrollbar-y-rail:hover {
+  background-color: #eee;
+  opacity: 0.9;
+}
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+  background-color: #999;
+}
