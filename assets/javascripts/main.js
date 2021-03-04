@@ -186,7 +186,7 @@
     7: [
       function (e, t) {
         t.exports =
-          '<div class="m-project-detail-header"  v-bind:style="{ height: height + \'px\' }" >\n\n  <div class="wrapper">\n\n    <div class="line title"> <div class="inner" v-el:title v-bind:style="{ color: info.color }"> {{info.title}} </div> </div>\n    <div class="line date"> <div class="inner" v-el:year> <span class="label">Year</span> {{info.date}} </div> </div>\n    <div class="line client"> <div class="inner" v-el:client> <span class="label">Client</span> {{info.client}}</div> </div>\n    <div class="line role"> <div class="inner" v-el:role1> <span class="label">Role</span> {{info.role}} & {{info.role2}} </div> </div>\n\n  </div>\n\n</div>';
+          '<div class="m-project-detail-header"  v-bind:style="{ height: height + \'px\' }" >\n\n  <div class="wrapper">\n\n    <div class="line title"> <div class="inner" v-el:title v-bind:style="{ color: info.color }"> {{info.title}} </div> </div>\n    <div class="line date"> <div class="inner" v-el:year> <span class="label">Year</span> {{info.date}} </div> </div>\n    <div class="line role"> <div class="inner" v-el:role1> <span class="label">Role</span> {{info.role}} & {{info.role2}} </div> </div>\n\n  </div>\n\n</div>';
       },
       {},
     ],
@@ -1126,7 +1126,7 @@
     27: [
       function (e, t) {
         t.exports =
-          '<section id="home" @click="onClick">\n\n  <div class="slides" v-el:slides>\n\n    <div class="slide presentation">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">P</span> </span>\n          <span class="letter"> <span class="inner">R</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">A</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide skills">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">S</span> </span>\n          <span class="letter"> <span class="inner">K</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">L</span> </span>\n          <span class="letter"> <span class="inner">L</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n          </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/peugeot.png" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide diplomes-formations">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">D</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">P</span> </span>\n          <span class="letter"> <span class="inner">L</span> </span>\n          <span class="letter"> <span class="inner">Ô</span> </span>\n          <span class="letter"> <span class="inner">M</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n          <span class="letter"> <span class="inner">-</span> </span>\n          <span class="letter"> <span class="inner">F</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">R</span> </span>\n          <span class="letter"> <span class="inner">M</span> </span>\n          <span class="letter"> <span class="inner">A</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/canalsat.png" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide projets">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">P</span> </span>\n          <span class="letter"> <span class="inner">R</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">J</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/poiray.png" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide contact">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">C</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">A</span> </span>\n          <span class="letter"> <span class="inner">C</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/tignes.png" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide hermes">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">H</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">R</span> </span>\n          <span class="letter"> <span class="inner">M</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/hermes.png" alt="">\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class="instructions" v-el:instructions>\n    <div class="scroll">Scroll to navigate</div>\n    <!--<div class="click">Click to explore a project</div>-->\n  </div>\n\n</section>\n';
+          '<section id="home" @click="onClick">\n\n  <div class="slides" v-el:slides>\n\n    <div class="slide presentation">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">P</span> </span>\n          <span class="letter"> <span class="inner">R</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">A</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide skills">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">S</span> </span>\n          <span class="letter"> <span class="inner">K</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">L</span> </span>\n          <span class="letter"> <span class="inner">L</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n          </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/peugeot.png" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide diplomes-formations">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">D</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">P</span> </span>\n          <span class="letter"> <span class="inner">L</span> </span>\n          <span class="letter"> <span class="inner">Ô</span> </span>\n          <span class="letter"> <span class="inner">M</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n          <span class="letter"> <span class="inner">-</span> </span>\n          <span class="letter"> <span class="inner">F</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">R</span> </span>\n          <span class="letter"> <span class="inner">M</span> </span>\n          <span class="letter"> <span class="inner">A</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">I</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/canalsat.png" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide projets">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">P</span> </span>\n          <span class="letter"> <span class="inner">R</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">J</span> </span>\n          <span class="letter"> <span class="inner">E</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">S</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/poiray.png" alt="">\n        </div>\n      </div>\n    </div>\n\n    <div class="slide contact">\n      <div class="title-wrapper">\n        <div class="title">\n          <span class="letter"> <span class="inner">C</span> </span>\n          <span class="letter"> <span class="inner">O</span> </span>\n          <span class="letter"> <span class="inner">N</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n          <span class="letter"> <span class="inner">A</span> </span>\n          <span class="letter"> <span class="inner">C</span> </span>\n          <span class="letter"> <span class="inner">T</span> </span>\n        </div>\n      </div>\n      <div class="img">\n        <div class="img-wrapper">\n          <img src="./assets/images/home/tignes.png" alt="">\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class="instructions" v-el:instructions>\n    <div class="scroll">Scroll to navigate</div>\n    <!--<div class="click">Click to explore a project</div>-->\n  </div>\n\n</section>\n';
       },
       {},
     ],
@@ -1159,7 +1159,7 @@
           j = !1,
           C = { x: 0, y: 0 },
           k = "up",
-          _ = ["présentation", "skills", "diplômes-formations", "projet", "contact"],
+          _ = ["presentation", "skills", "diplômes-formations", "projet", "contact"],
           L = window.innerWidth,
           z = window.innerHeight,
           T = function () {};
@@ -1614,7 +1614,7 @@
     35: [
       function (e, t) {
         t.exports =
-          '<section id="m-home">\n\n  <headerr>/</headerr>\n\n  <div class="slide maje" @click="onSlideTouched(\'maje\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">M</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">J</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/maje.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide peugeot" @click="onSlideTouched(\'peugeot\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">P</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">U</span> </span>\n        <span class="letter"> <span class="inner">G</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">O</span> </span>\n        <span class="letter"> <span class="inner">T</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/peugeot.jpg" alt="">\n    </div>\n\n  </div>\n\n  <div class="slide canalsat" @click="onSlideTouched(\'canalsat\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">C</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">N</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">L</span> </span>\n        <span class="letter"> <span class="inner">S</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">T</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/canalsat.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide poiray" @click="onSlideTouched(\'poiray\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">P</span> </span>\n        <span class="letter"> <span class="inner">O</span> </span>\n        <span class="letter"> <span class="inner">I</span> </span>\n        <span class="letter"> <span class="inner">R</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">Y</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/poiray.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide tignes" @click="onSlideTouched(\'tignes\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">T</span> </span>\n        <span class="letter"> <span class="inner">I</span> </span>\n        <span class="letter"> <span class="inner">G</span> </span>\n        <span class="letter"> <span class="inner">N</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">S</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/tignes.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide hermes" @click="onSlideTouched(\'hermes\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">H</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">R</span> </span>\n        <span class="letter"> <span class="inner">M</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">S</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/hermes.jpg" alt="">\n    </div>\n  </div>\n\n</section>\n';
+          '<section id="m-home">\n\n  <headerr>/</headerr>\n\n  <div class="slide presentation" @click="onSlideTouched(\'maje\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">M</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">J</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/maje.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide skills" @click="onSlideTouched(\'peugeot\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">P</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">U</span> </span>\n        <span class="letter"> <span class="inner">G</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">O</span> </span>\n        <span class="letter"> <span class="inner">T</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/peugeot.jpg" alt="">\n    </div>\n\n  </div>\n\n  <div class="slide canalsat" @click="onSlideTouched(\'canalsat\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">C</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">N</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">L</span> </span>\n        <span class="letter"> <span class="inner">S</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">T</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/canalsat.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide poiray" @click="onSlideTouched(\'poiray\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">P</span> </span>\n        <span class="letter"> <span class="inner">O</span> </span>\n        <span class="letter"> <span class="inner">I</span> </span>\n        <span class="letter"> <span class="inner">R</span> </span>\n        <span class="letter"> <span class="inner">A</span> </span>\n        <span class="letter"> <span class="inner">Y</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/poiray.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide tignes" @click="onSlideTouched(\'tignes\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">T</span> </span>\n        <span class="letter"> <span class="inner">I</span> </span>\n        <span class="letter"> <span class="inner">G</span> </span>\n        <span class="letter"> <span class="inner">N</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">S</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/tignes.jpg" alt="">\n    </div>\n  </div>\n\n  <div class="slide hermes" @click="onSlideTouched(\'hermes\')">\n    <div class="title-wrapper">\n      <div class="title">\n        <span class="letter"> <span class="inner">H</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">R</span> </span>\n        <span class="letter"> <span class="inner">M</span> </span>\n        <span class="letter"> <span class="inner">E</span> </span>\n        <span class="letter"> <span class="inner">S</span> </span>\n      </div>\n    </div>\n    <div class="img-wrapper">\n      <img src="./assets/images/m-home/hermes.jpg" alt="">\n    </div>\n  </div>\n\n</section>\n';
       },
       {},
     ],
@@ -2335,59 +2335,59 @@
         "use strict";
         Object.defineProperty(n, "__esModule", { value: !0 });
         var s = {
-            maje: {
-              id: "maje",
-              next: "peugeot",
+            presentation: {
+              id: "presentation",
+              next: "skills",
               info: {
-                title: "MAJE",
-                date: "2014",
-                client: "BETC Digital",
-                role: "Art Direction",
+                title: "Présentation",
+                date: "2021",
+                // client: "BETC DigitalPIERRE",
+                role: "Art",
                 role2: "UX Design",
                 color: "#b1a995",
               },
             },
-            peugeot: {
-              id: "peugeot",
-              next: "canalsat",
+            skills: {
+              id: "skills",
+              next: "diplomes-formations",
               info: {
-                title: "PEUGEOT",
-                date: "2014",
-                client: "BETC Digital",
+                title: "Skills",
+                date: "2021",
+                // client: "BETC Digital",
                 role: "Art Direction",
                 role2: "UX Design",
                 color: "#75a1a4",
               },
             },
-            canalsat: {
-              id: "canalsat",
-              next: "poiray",
+            diplomes_formations: {
+              id: "diplomes-formations",
+              next: "projets",
               info: {
-                title: "CANALSAT",
-                date: "2014",
-                client: "BETC Digital",
+                title: "Diplômes - Formations",
+                date: "2021",
+                // client: "BETC Digital",
                 role: "Art Direction",
                 role2: "UX Design",
                 color: "#756882",
               },
             },
-            poiray: {
-              id: "poiray",
-              next: "tignes",
+            projets: {
+              id: "projets",
+              next: "contact",
               info: {
-                title: "POIRAY",
-                date: "2015",
-                client: "BETC Digital",
+                title: "Projets",
+                date: "2021",
+                // client: "BETC Digital",
                 role: "Art Direction",
                 role2: "UX Design",
                 color: "#95cfb4",
               },
             },
-            tignes: {
-              id: "tignes",
-              next: "hermes",
+            contact: {
+              id: "contact",
+            //   next: "hermes",
               info: {
-                title: "TIGNES",
+                title: "Contact",
                 date: "2015",
                 client: "Pixelis",
                 role: "Art Direction",
@@ -2395,18 +2395,18 @@
                 color: "#c92138",
               },
             },
-            hermes: {
-              id: "hermes",
-              next: "maje",
-              info: {
-                title: "HERMÈS",
-                date: "2015",
-                client: "AKQA",
-                role: "Art Direction",
-                role2: "UX Design",
-                color: "#f26a38",
-              },
-            },
+            // hermes: {
+            //   id: "hermes",
+            //   next: "maje",
+            //   info: {
+            //     title: "HERMÈS",
+            //     date: "2015",
+            //     client: "AKQA",
+            //     role: "Art Direction",
+            //     role2: "UX Design",
+            //     color: "#f26a38",
+            //   },
+            // },
           },
           c = { width: window.innerWidth, height: window.innerHeight },
           i = {
