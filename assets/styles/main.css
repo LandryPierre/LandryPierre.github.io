@@ -947,12 +947,12 @@ section#home .slide.presentation .title {
 section#home .slide.presentation .title .letter {
   flex-basis: 8.333%;
 }
-section#home .slide.diplomes-formations .title {
+section#home .slide.diplomes_formations .title {
   color: #756980;
   font-size: 8vw;
   margin-top: 12vh;
 }
-section#home .slide.diplomes-formations .title .letter {
+section#home .slide.diplomes_formations .title .letter {
   flex-basis: 5.26%;
 }
 section#home .slide.projets .title {
